@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blogs</title>
+    <title>ABOUT</title>
 
     <link
       href="https://fonts.googleapis.com/css?family=Roboto:400,700"
@@ -19,13 +19,13 @@
 
   <body>
     <style>
-      body {
+      {% comment %} body {
         font-family: "Roboto", sans-serif;
         font-size: 17px;
         background-color: #fdfdfd;
-      }
+      } {% endcomment %}
 
-    .shadow{
+    {% comment %} .shadow{
            box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
        }
       .btn-danger {
@@ -40,13 +40,19 @@
               padding-bottom: 15px;
               box-shadow: 0 16px 48px #E3E7EB;
               padding-top: 10px;
+    } {% endcomment %}
+    .h1{
+        text-align:center;
+    }
+    .harsh{
+        margin-top:291px;
     }
     </style>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark shadow" id="mainNav">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'home' %}" >Django central</a>
+        <a class="navbar-brand text-white" href="{% url 'home' %}" >MY BLOG</a>
         <button
           class="navbar-toggler navbar-toggler-right"
           type="button"
@@ -64,15 +70,22 @@
             
             <li class="nav-item text-black">
               <a
-                class="nav-link text-black font-weight-bold"
-                href="#"
+                class="nav-link text-white font-weight-bold"
+                href="/about"
                 >About</a
               >
             </li>
             <li class="nav-item text-black">
               <a
-                class="nav-link text-black font-weight-bold"
+                class="nav-link text-white font-weight-bold"
                 href="#"
+                >Policy</a
+              >
+            </li>
+            <li class="nav-item text-black">
+              <a
+                class="nav-link text-white font-weight-bold"
+                href="/contact"
                 >Contact</a
               >
             </li>
@@ -81,16 +94,22 @@
       </div>
     </div>
     </nav>
-    
-
-            {% block content %} 
-          <!-- Content Goes here -->
-            {% endblock content %}
-    
+<div class="container text-center my-5" >
+<h3>
+THIS IS THE SIMPLE BLOG PROJECT IN WHICH <br>
+WE CAN CREATE SIMPLE POST AND PUBLISH IT <br>
+<h3 style="color:red;">
+PROJECT BY:<br>
+<li>HARSH SOLANKI</li>            
+<li>HARSHIT SHETTY</li>
+<li>RAJAT SAVDEKAR</li>
+</h3>
+</h3>
+</div>
+</div>
     <!-- Footer -->
-    <footer class="py-3 bg-grey">
-              <p class="m-0 text-dark text-center "></p>
+<footer class="harsh py-3 bg-dark">
+              <p class="m-0 text-white text-center ">Copyright &copy;<a style="color:white;" href="{% url 'home' %}" >MY BLOG</a></p>
     </footer>
-    
   </body>
 </html>
