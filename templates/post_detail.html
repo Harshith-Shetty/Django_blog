@@ -1,10 +1,27 @@
 {% extends 'base.html' %} {% block content %}
+<style>
 
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: #ffffc7;
+    }
+
+    .head_text{
+    color: white;
+  }
+    .card{
+    color: #02475e;
+    background-color: #f3bda1;
+    box-shadow: 0 6px 8px #E3E7EB;
+    }
+
+</style>
 <div class="container">
   <div class="row">
     <div class="col-md-8 card mb-4  mt-3 left  top">
       <div class="card-body">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <bold><h1>{% block title %} {{ object.title }} {% endblock title %}</h1></bold>
         <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
         <p class="card-text ">{{ object.content | safe }}</p>
       </div>
